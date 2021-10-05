@@ -1,25 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./css/App.css";
+import Shelf from "./containers/Shelf";
+import ItemCardDisplay from "./containers/ItemCardDisplay";
+import Item from "./containers/Item";
+import Navbar from "./components/Navbar";
+import Cart from "./containers/Cart";
+import UserShelf from "./containers/UserShelf";
+import EditItemForm from "./components/EditItemForm";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <div id="navbar">
+            <Navbar />
+          </div>
+          <div className="wrapper">
+            <div>
+              <Switch>
+                <Route
+                  path="/editItem"
+                  render={props => (
+                    <EditItemForm {...props} user_id={this.props.user_id} />
+                  )}
+                />
+                <Route
+                  path="/cart"
+                  render={props => (
+                    <Cart {...props} user_id={this.props.user_id} />
+                  )}
+                />
+                <Route
+                  path="/shelf"
+                  render={props => (
+                    <UserShelf {...props} user_id={this.props.user_id} />
+                  )}
+                />
+              </Switch>
+            </div>
+            <div>
+              <Switch>
+                <Route
+                  exact
+                  path="/shelves/:shelf_id/items/:id"
+                  render={props => <ItemCardDisplay {...props} />}
+                />
+                <Route
+                  exact
+                  path="/shelves"
+                  render={props => (
+                    <Shelf {...props} user_id={this.props.user_id} />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/shelves/:shelf_id/items"
+                  render={props => <Item {...props} />}
+                />
+              </Switch>
+            </div>
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
