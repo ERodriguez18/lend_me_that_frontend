@@ -23,7 +23,7 @@ class Item extends Component {
     return (
       <>
         <div id="main-content">
-          <Ad />
+          
         </div>
         <div id="shelf">
           <h3>Items</h3>
