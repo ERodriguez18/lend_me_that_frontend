@@ -1,0 +1,22 @@
+#navbar {
+    width: 100vw;
+    height: 87px;
+    background-color: #7d4f50;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    color: #d1be9c;
+    font-weight: bold;
+    padding: 30px;
+  }
+  
+  #navbar a:hover {
+    font-weight: 400;
+  }
