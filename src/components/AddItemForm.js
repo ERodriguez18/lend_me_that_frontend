@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../css/AddItemForm.css";
-import DatetimeRangePicker from "react-datetime-range-picker";
+import DatetimeRangePicker from '@wojtekmaj/react-datetimerange-picker';
 
 class AddItemForm extends Component {
   state = {
