@@ -1,0 +1,15 @@
+#addItemForm {
+    position: fixed;
+    top: 87px;
+    z-index: 1;
+    background: #709fb0;
+    padding: 25px;
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+  
+  #addItemForm input[type="text"] {
+    padding: 5px;
+    width: 15rem;
+    font-size: large;
+  }

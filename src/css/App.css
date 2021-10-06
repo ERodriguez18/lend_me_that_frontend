@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dcb1ae;
+}
+
+.App {
+  font-family: "Comfortaa", cursive;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /*overflow: hidden;*/
+}
+
+#navbar,
+#shelf,
+#main-content {
+  float: left;
+}
+
+#shelf,
+#main-content {
+  height: 90vh;
+  position: fixed;
+  top: 11vh;
+}
+
+#main-content {
+  right: 30vw;
+  width: 70vw;
+  background-color: #709fb0;
+  top: 90px;
+}
+
+#cart,
+#user-shelf {
+  top: 90px;
+  position: relative;
+}
+
+.item,
+.cartCard {
+  width: 15rem;
+  padding: 30px;
+  margin: 5px;
+  background-color: #709fb0;
+  border-radius: 5px;
+}
+
+.ad {
+  margin: 9rem;
+  font-weight: bold;
+}

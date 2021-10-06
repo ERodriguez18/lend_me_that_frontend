@@ -1,0 +1,16 @@
+#shelf {
+    width: 30vw;
+    background-color: #d1be9c;
+    right: 0;
+    top: 90px;
+  }
+  
+  #shelf a {
+    text-decoration: none;
+    color: #709fb0;
+    font-weight: bold;
+  }
+  
+  #shelf a:hover {
+    font-weight: 400;
+  }
