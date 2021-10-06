@@ -3,7 +3,7 @@ import "./css/App.css";
 import Shelf from "./containers/Shelf";
 import ItemCardDisplay from "./containers/ItemCardDisplay";
 import Item from "./containers/Item";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import Cart from "./containers/Cart";
 import UserShelf from "./containers/UserShelf";
 import EditItemForm from "./components/EditItemForm";
