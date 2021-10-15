@@ -32,7 +32,9 @@ export function getItem(shelf_id, id) {
 export function getUserShelfItems(user_id, shelf_id) {
   return (dispatch) => {
     dispatch({type: 'LOADING'})
-    fetch(`${API_URL}/users/${user_id}/shelves/${shelf_id}/items`)
+    console.log("Making request to user shelf items route")
+    console.log(`${API_URL}/users/${user_id}/items`)
+    fetch(`${API_URL}/users/${user_id}/items`)
       .then(response => response.json())
       .then(items => dispatch({ type: 'GET_USER_SHELF_ITEMS', payload: items})
     )

@@ -7,10 +7,8 @@ import "../css/UserShelf.css";
 
 class UserShelf extends Component {
   componentDidMount() {
-    // hard coded user_id, and shelf_id
     let user_id = this.props.user_id;
-    let shelf_id = user_id;
-    this.props.getUserShelfItems(user_id, shelf_id);
+    this.props.getUserShelfItems(user_id);
   }
 
   handleLoading = () => {
